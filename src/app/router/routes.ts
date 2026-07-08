@@ -1,13 +1,13 @@
 import type { RouteRecordRaw } from 'vue-router'
 import PublicLayout from '../../shared/layouts/PublicLayout.vue'
-import HomePage from '@/features/home/pages/HomePage.vue'
-import PostPage from '@/features/post/pages/PostPage.vue'
-import CitiesPage from '@/features/cities/pages/CitiesPage.vue'
-import ConstructionsPage from '@/features/contructions/pages/ConstructionsPage.vue'
-import ContactPage from '@/features/contact/pages/ContactPage.vue'
-import CityPage from '@/features/city/pages/CityPage.vue'
-import AnnouncementPage from '@/features/announcements/pages/AnnouncementPage.vue'
-import BlogPage from '@/features/blog/pages/BlogPage.vue'
+import HomePage from '@/features/public/home/pages/HomePage.vue'
+import PostPage from '@/features/public/post/pages/PostPage.vue'
+import CitiesPage from '@/features/public/cities/pages/CitiesPage.vue'
+import ConstructionsPage from '@/features/public/contructions/pages/ConstructionsPage.vue'
+import ContactPage from '@/features/public/contact/pages/ContactPage.vue'
+import CityPage from '@/features/public/city/pages/CityPage.vue'
+import AnnouncementPage from '@/features/public/announcements/pages/AnnouncementPage.vue'
+import BlogPage from '@/features/public/blog/pages/BlogPage.vue'
 
 export const routes: RouteRecordRaw[] = [
   {

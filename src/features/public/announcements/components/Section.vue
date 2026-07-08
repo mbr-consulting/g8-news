@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { SectionProps } from '../types'
+import type { SectionProps } from '../types/index.ts'
 import SectionItem from './SectionItem.vue';
 
 defineProps<SectionProps>()
@@ -20,7 +20,7 @@ defineProps<SectionProps>()
         :link="item.link"
         :altText="item.altText"
       />
-      
+
       <a
         class="group block text-center space-y-stack-md transition-all active:scale-95"
         href="https://www.bistrodovale.com.br/"
