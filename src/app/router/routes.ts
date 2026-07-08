@@ -7,6 +7,7 @@ import ConstructionsPage from '@/features/contructions/pages/ConstructionsPage.v
 import ContactPage from '@/features/contact/pages/ContactPage.vue'
 import CityPage from '@/features/city/pages/CityPage.vue'
 import AnnouncementPage from '@/features/announcements/pages/AnnouncementPage.vue'
+import BlogPage from '@/features/blog/pages/BlogPage.vue'
 
 export const routes: RouteRecordRaw[] = [
   {
@@ -57,6 +58,11 @@ export const routes: RouteRecordRaw[] = [
         path: 'post/:slug',
         name: 'Post',
         component: PostPage,
+      },
+      {
+        path: 'blog',
+        name: 'Blog',
+        component: BlogPage,
       },
     ],
   },
