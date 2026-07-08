@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import Section from '../components/Section.vue'
+</script>
+
 <template>
   <main class="min-h-screen">
     <!-- Hero Section -->
@@ -19,8 +23,9 @@
     </section>
     <!-- Content Area -->
     <div class="max-w-container-max mx-auto px-margin-x py-section-padding space-y-24">
+      <Section title="Testando aqui" :items="[]" />
       <!-- Category: Restaurantes e Cafés -->
-      <section class="space-y-stack-lg">
+      <!-- <section class="space-y-stack-lg">
         <div class="flex items-center gap-4">
           <h3 class="font-headline-md text-headline-md text-primary shrink-0">
             Restaurantes e Cafés
@@ -28,7 +33,6 @@
           <div class="h-[1px] w-full bg-outline-variant"></div>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-gutter">
-          <!-- Cards loop -->
           <a
             class="group block text-center space-y-stack-md transition-all active:scale-95"
             href="#"
@@ -108,9 +112,9 @@
             >
           </a>
         </div>
-      </section>
+      </section> -->
       <!-- Category: Hotéis e Pousadas -->
-      <section class="space-y-stack-lg">
+      <!-- <section class="space-y-stack-lg">
         <div class="flex items-center gap-4">
           <h3 class="font-headline-md text-headline-md text-primary shrink-0">Hotéis e Pousadas</h3>
           <div class="h-[1px] w-full bg-outline-variant"></div>
@@ -169,9 +173,9 @@
             >
           </a>
         </div>
-      </section>
+      </section> -->
       <!-- Category: Experiências Gastronômicas -->
-      <section class="space-y-stack-lg">
+      <!-- <section class="space-y-stack-lg">
         <div class="flex items-center gap-4">
           <h3 class="font-headline-md text-headline-md text-primary shrink-0">
             Experiências Gastronômicas
@@ -206,7 +210,7 @@
             >
           </a>
         </div>
-      </section>
+      </section> -->
       <!-- Lead Gen Section for Advertisers -->
       <section class="bg-primary text-on-primary rounded-xl p-12 text-center space-y-stack-md">
         <h4 class="font-headline-md text-headline-md">Sua marca aqui no G8 News?</h4>
