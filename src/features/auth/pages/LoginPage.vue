@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-background min-h-screen flex items-center justify-center p-margin-x text-on-surface font-body-md"
+    class="public-theme bg-background min-h-screen flex items-center justify-center p-margin-x text-on-surface font-body-md"
   >
     <!-- Login Container -->
     <main
@@ -81,13 +81,15 @@
           </div>
         </div>
         <!-- Submit Button -->
-        <button
-          class="w-full mt-4 bg-primary text-on-primary font-label-lg text-label-lg py-4 px-6 rounded-lg hover:bg-primary-container hover:shadow-md transition-all duration-200 flex items-center justify-center gap-2"
-          type="submit"
-        >
-          <span>Entrar</span>
-          <span class="material-symbols-outlined text-sm">login</span>
-        </button>
+        <RouterLink :to="{ name: 'Dashboard' }">
+          <button
+            class="w-full mt-4 bg-primary text-on-primary font-label-lg text-label-lg py-4 px-6 rounded-lg hover:bg-primary-container hover:shadow-md transition-all duration-200 flex items-center justify-center gap-2"
+            type="submit"
+          >
+            <span>Entrar</span>
+            <span class="material-symbols-outlined text-sm">login</span>
+          </button>
+        </RouterLink>
       </form>
       <!-- Footer -->
       <div class="px-stack-lg pb-stack-lg pt-4 text-center">
