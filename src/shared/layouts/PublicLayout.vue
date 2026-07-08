@@ -28,11 +28,15 @@ import { Menu } from '../components'
           >
             <span class="material-symbols-outlined" data-icon="search">search</span>
           </button> -->
-          <!-- <button
-            class="hover:text-primary transition-colors scale-95 active:opacity-80 flex items-center justify-center p-2 rounded-full hover:bg-surface-variant"
-          >
-            <span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
-          </button> -->
+          <RouterLink to="/login">
+            <button
+              class="hover:text-primary transition-colors scale-95 active:opacity-80 flex items-center justify-center p-2 rounded-full hover:bg-surface-variant"
+            >
+              <span class="material-symbols-outlined" data-icon="account_circle"
+                >account_circle</span
+              >
+            </button>
+          </RouterLink>
         </div>
       </div>
     </div>

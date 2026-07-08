@@ -8,8 +8,14 @@ import ContactPage from '@/features/public/contact/pages/ContactPage.vue'
 import CityPage from '@/features/public/city/pages/CityPage.vue'
 import AnnouncementPage from '@/features/public/announcements/pages/AnnouncementPage.vue'
 import BlogPage from '@/features/public/blog/pages/BlogPage.vue'
+import LoginPage from '@/features/auth/pages/LoginPage.vue'
 
 export const routes: RouteRecordRaw[] = [
+  {
+    path: '/login',
+    name: 'Login',
+    component: LoginPage,
+  },
   {
     path: '/',
     component: PublicLayout,
