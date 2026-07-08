@@ -1,6 +1,5 @@
-@import 'tailwindcss';
-
-@theme {
+.public-theme {
+  
   /* Colors */
   --color-surface-bright: #f8f9fa;
   --color-on-secondary-container: #745c00;
@@ -50,13 +49,15 @@
   --color-secondary: #735c00;
   --color-error-container: #ffdad6;
 
-  /* Border Radius */
+  /* Radius */
+
   --radius: 0.125rem;
   --radius-lg: 0.25rem;
   --radius-xl: 0.5rem;
   --radius-full: 0.75rem;
 
   /* Spacing */
+
   --spacing-stack-sm: 8px;
   --spacing-stack-md: 16px;
   --spacing-stack-lg: 32px;
@@ -66,26 +67,28 @@
   --spacing-container-max: 1280px;
 
   /* Fonts */
-  --font-headline-lg-mobile: 'Source Serif 4', serif;
-  --font-headline-sm: 'Source Serif 4', serif;
-  --font-headline-md: 'Source Serif 4', serif;
-  --font-headline-lg: 'Source Serif 4', serif;
-  --font-display-lg: 'Source Serif 4', serif;
 
-  --font-body-sm: 'Work Sans', sans-serif;
-  --font-body-md: 'Work Sans', sans-serif;
-  --font-body-lg: 'Work Sans', sans-serif;
-  --font-label-md: 'Work Sans', sans-serif;
-  --font-label-lg: 'Work Sans', sans-serif;
+  --font-headline-lg-mobile: "Source Serif 4", serif;
+  --font-headline-sm: "Source Serif 4", serif;
+  --font-headline-md: "Source Serif 4", serif;
+  --font-headline-lg: "Source Serif 4", serif;
+  --font-display-lg: "Source Serif 4", serif;
 
-  /* Font Sizes */
+  --font-body-sm: "Work Sans", sans-serif;
+  --font-body-md: "Work Sans", sans-serif;
+  --font-body-lg: "Work Sans", sans-serif;
+  --font-label-md: "Work Sans", sans-serif;
+  --font-label-lg: "Work Sans", sans-serif;
+
+  /* Typography */
+
   --text-headline-lg-mobile: 28px;
   --text-headline-lg-mobile--line-height: 34px;
   --text-headline-lg-mobile--font-weight: 700;
 
   --text-label-md: 12px;
   --text-label-md--line-height: 14px;
-  --text-label-md--letter-spacing: 0.02em;
+  --text-label-md--letter-spacing: .02em;
   --text-label-md--font-weight: 500;
 
   --text-body-md: 16px;
@@ -94,7 +97,7 @@
 
   --text-display-lg: 48px;
   --text-display-lg--line-height: 56px;
-  --text-display-lg--letter-spacing: -0.02em;
+  --text-display-lg--letter-spacing: -.02em;
   --text-display-lg--font-weight: 700;
 
   --text-headline-sm: 20px;
@@ -107,7 +110,7 @@
 
   --text-label-lg: 14px;
   --text-label-lg--line-height: 16px;
-  --text-label-lg--letter-spacing: 0.05em;
+  --text-label-lg--letter-spacing: .05em;
   --text-label-lg--font-weight: 600;
 
   --text-headline-lg: 32px;
@@ -121,32 +124,4 @@
   --text-body-lg: 18px;
   --text-body-lg--line-height: 28px;
   --text-body-lg--font-weight: 400;
-}
-
-@layer utilities {
-  .material-symbols-outlined {
-    font-family: 'Material Symbols Outlined';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;
-    line-height: 1;
-    letter-spacing: normal;
-    text-transform: none;
-    display: inline-block;
-    white-space: nowrap;
-    word-wrap: normal;
-    direction: ltr;
-    -webkit-font-feature-settings: 'liga';
-    -webkit-font-smoothing: antialiased;
-  }
-}
-
-/* Custom signature-line input style as per guidelines */
-.signature-input {
-  border-bottom: 1px solid #717973;
-  transition: border-color 0.3s ease;
-}
-.signature-input:focus {
-  border-bottom: 2px solid #012d1d;
-  outline: none;
 }
