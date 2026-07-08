@@ -23,16 +23,16 @@ import { Menu } from '../components'
 
         <!-- Action Icons -->
         <div class="flex gap-stack-sm text-primary flex-shrink-0">
-          <button
+          <!-- <button
             class="hover:text-primary transition-colors scale-95 active:opacity-80 flex items-center justify-center p-2 rounded-full hover:bg-surface-variant"
           >
             <span class="material-symbols-outlined" data-icon="search">search</span>
-          </button>
-          <button
+          </button> -->
+          <!-- <button
             class="hover:text-primary transition-colors scale-95 active:opacity-80 flex items-center justify-center p-2 rounded-full hover:bg-surface-variant"
           >
             <span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
-          </button>
+          </button> -->
         </div>
       </div>
     </div>

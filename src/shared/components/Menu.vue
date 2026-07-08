@@ -3,7 +3,7 @@ import { MenuItem } from '.'
 </script>
 
 <template>
-  <nav class="flex-grow flex justify-center gap-gutter font-label-lg text-label-lg overflow-x-auto">
+  <nav class="flex-grow flex justify-center gap-gutter font-label-lg text-label-lg">
     <MenuItem label="PAGINA INICIAL" href="/" />
     <MenuItem label="CIDADES" href="/cidades" />
     <MenuItem label="G8 CONSTRUÇÕES" href="/g8-construcoes" />
