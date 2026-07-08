@@ -9,6 +9,9 @@ import CityPage from '@/features/public/city/pages/CityPage.vue'
 import AnnouncementPage from '@/features/public/announcements/pages/AnnouncementPage.vue'
 import BlogPage from '@/features/public/blog/pages/BlogPage.vue'
 import LoginPage from '@/features/auth/pages/LoginPage.vue'
+import PanelLayout from '@/shared/layouts/PanelLayout.vue'
+import { DashboardPage } from '@/features/panel/index.ts'
+
 
 export const routes: RouteRecordRaw[] = [
   {
@@ -70,6 +73,18 @@ export const routes: RouteRecordRaw[] = [
         name: 'Blog',
         component: BlogPage,
       },
+    ],
+  },
+  {
+    path: '/panel',
+    name: 'Panel',
+    component: PanelLayout,
+    children: [
+      {
+        path: 'dashboard',
+        name: 'Dashboard',
+        component: DashboardPage,
+      }
     ],
   },
 ]
