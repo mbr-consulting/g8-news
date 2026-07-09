@@ -1,4 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import MenuItem from './MenuItem.vue';
+
+</script>
 <template>
   <nav
     class="h-screen w-64 fixed left-0 top-0 bg-surface-container-low flex flex-col h-full py-stack-lg z-20"
@@ -7,18 +10,17 @@
       <h1 class="font-headline-md text-headline-md font-bold text-primary">G8 News</h1>
       <p class="font-label-md text-label-md text-on-surface-variant mt-1">Admin Dashboard</p>
     </div>
-    <div class="px-margin-x mb-stack-lg">
-      <button
-        class="w-full bg-primary-container text-on-primary py-3 px-4 rounded font-label-lg text-label-lg flex items-center justify-center gap-2 hover:bg-primary transition-colors"
-      >
-        <span class="material-symbols-outlined text-[18px]">add</span>
-        Create New Post
-      </button>
-    </div>
     <div class="flex-1 overflow-y-auto">
       <ul class="flex flex-col">
+        <MenuItem icon="dashboard" label="Visão Geral" href="/panel/dashboard" />
+        <MenuItem icon="article" label="Artigos" href="/panel/posts" />
+        <MenuItem icon="campaign" label="Anúncios" href="/panel/ads" />
+        <MenuItem icon="location_city" label="Cidades" href="/panel/cities" />
+        <MenuItem icon="group" label="Usuários" href="/panel/users" />
+
+
         <!-- Posts (Active) -->
-        <li>
+        <!-- <li>
           <a
             class="flex items-center gap-3 px-margin-x py-3 text-primary font-bold border-r-4 border-primary bg-surface-container-high dark:bg-surface-container-highest transition-colors duration-200 ease-in-out"
             href="#"
@@ -30,9 +32,9 @@
             >
             <span class="font-label-lg text-label-lg">Posts</span>
           </a>
-        </li>
+        </li> -->
         <!-- Ads -->
-        <li>
+        <!-- <li>
           <a
             class="flex items-center gap-3 px-margin-x py-3 text-on-surface-variant hover:bg-surface-variant hover:text-on-surface transition-colors duration-200 ease-in-out"
             href="#"
@@ -40,9 +42,9 @@
             <span class="material-symbols-outlined text-[20px]">campaign</span>
             <span class="font-label-lg text-label-lg">Ads</span>
           </a>
-        </li>
+        </li> -->
         <!-- Cities -->
-        <li>
+        <!-- <li>
           <a
             class="flex items-center gap-3 px-margin-x py-3 text-on-surface-variant hover:bg-surface-variant hover:text-on-surface transition-colors duration-200 ease-in-out"
             href="#"
@@ -50,9 +52,9 @@
             <span class="material-symbols-outlined text-[20px]">location_city</span>
             <span class="font-label-lg text-label-lg">Cities</span>
           </a>
-        </li>
+        </li> -->
         <!-- Users -->
-        <li>
+        <!-- <li>
           <a
             class="flex items-center gap-3 px-margin-x py-3 text-on-surface-variant hover:bg-surface-variant hover:text-on-surface transition-colors duration-200 ease-in-out"
             href="#"
@@ -60,7 +62,7 @@
             <span class="material-symbols-outlined text-[20px]">group</span>
             <span class="font-label-lg text-label-lg">Users</span>
           </a>
-        </li>
+        </li> -->
       </ul>
     </div>
     <div class="mt-auto border-t border-outline-variant pt-stack-sm px-margin-x">
