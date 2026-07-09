@@ -4,7 +4,7 @@ import MenuItem from './MenuItem.vue';
 </script>
 <template>
   <nav
-    class="h-screen w-64 fixed left-0 top-0 bg-surface-container-low flex flex-col h-full py-stack-lg z-20"
+    class="h-screen w-64 fixed left-0 top-0 bg-surface-container-low flex flex-col h-full py-stack-lg z-20 border-r border-outline-variant"
   >
     <div class="px-margin-x mb-stack-lg">
       <h1 class="font-headline-md text-headline-md font-bold text-primary">G8 News</h1>
