@@ -10,7 +10,7 @@ import AnnouncementPage from '@/features/public/announcements/pages/Announcement
 import BlogPage from '@/features/public/blog/pages/BlogPage.vue'
 import LoginPage from '@/features/auth/pages/LoginPage.vue'
 import PanelLayout from '@/shared/layouts/PanelLayout.vue'
-import { DashboardPage } from '@/features/panel/index.ts'
+import { PanelDashboardPage, PanelPostsPage, PanelAdsPage, PanelCitiesPage, PanelUsersPage } from '@/features/panel/index.ts'
 
 
 export const routes: RouteRecordRaw[] = [
@@ -83,8 +83,28 @@ export const routes: RouteRecordRaw[] = [
       {
         path: 'dashboard',
         name: 'Dashboard',
-        component: DashboardPage,
-      }
+        component: PanelDashboardPage,
+      },
+      {
+        path: 'posts',
+        name: 'Posts',
+        component: PanelPostsPage,
+      },
+      {
+        path: 'ads',
+        name: 'Ads',
+        component: PanelAdsPage,
+      },
+      {
+        path: 'cities',
+        name: 'Cities',
+        component: PanelCitiesPage,
+      },
+      {
+        path: 'users',
+        name: 'Users',
+        component: PanelUsersPage,
+      },
     ],
   },
 ]
