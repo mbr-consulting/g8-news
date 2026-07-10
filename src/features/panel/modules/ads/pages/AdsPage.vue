@@ -25,17 +25,15 @@ const rows = [
       <PageTitle
         title="Listagem de Anúncios"
         subtitle="Gerencie os anúncios do portal."
-        :button="{ icon: 'add', label: 'Novo Anúncio' }"
+        :button="{ icon: 'add', label: 'Novo Anúncio', route: { name: 'CreateAd' } }"
       />
     </div>
-
-    <Table :columns="columns" :rows="rows" />
   </div>
 
   <!-- <div class="flex-1 overflow-y-auto p-margin-x">
     <div class="max-w-container-max mx-auto"> -->
   <!-- <div class="flex border-b border-outline-variant mb-stack-lg" role="tablist">
-    
+
   <!-- <div class="relative">
         <div
           aria-labelledby="tab-listagem"

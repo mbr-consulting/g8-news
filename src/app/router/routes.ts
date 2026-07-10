@@ -13,6 +13,7 @@ import PanelLayout from '@/shared/layouts/PanelLayout.vue'
 import { PanelDashboardPage, PanelPostsPage, PanelAdsPage, PanelCitiesPage, PanelUsersPage } from '@/features/panel/index.ts'
 import PostForm from '@/features/panel/modules/posts/pages/PostForm.vue'
 import CitiesForm from '@/features/panel/modules/cities/pages/CitiesForm.vue'
+import AdsForm from '@/features/panel/modules/ads/pages/AdsForm.vue'
 
 
 export const routes: RouteRecordRaw[] = [
@@ -103,6 +104,11 @@ export const routes: RouteRecordRaw[] = [
         path: 'ads',
         name: 'Ads',
         component: PanelAdsPage,
+      },
+      {
+        path: 'ads/create',
+        name: 'CreateAd',
+        component: AdsForm,
       },
       {
         path: 'cities',
