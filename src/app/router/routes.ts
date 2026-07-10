@@ -12,6 +12,7 @@ import LoginPage from '@/features/auth/pages/LoginPage.vue'
 import PanelLayout from '@/shared/layouts/PanelLayout.vue'
 import { PanelDashboardPage, PanelPostsPage, PanelAdsPage, PanelCitiesPage, PanelUsersPage } from '@/features/panel/index.ts'
 import PostForm from '@/features/panel/modules/posts/pages/PostForm.vue'
+import CitiesForm from '@/features/panel/modules/cities/pages/CitiesForm.vue'
 
 
 export const routes: RouteRecordRaw[] = [
@@ -107,6 +108,11 @@ export const routes: RouteRecordRaw[] = [
         path: 'cities',
         name: 'Cities',
         component: PanelCitiesPage,
+      },
+      {
+        path: 'cities/create',
+        name: 'CreateCities',
+        component: CitiesForm,
       },
       {
         path: 'users',

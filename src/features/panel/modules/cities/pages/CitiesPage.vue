@@ -8,7 +8,7 @@ import { PageTitle } from '@/features/panel/components'
       <PageTitle
         title="Listagem de Cidades"
         subtitle="Gerencie as cidades do portal."
-        :button="{ icon: 'add', label: 'Nova Cidade' }"
+        :button="{ icon: 'add', label: 'Nova Cidade', route: { name: 'CreateCities' } }"
       />
     </div>
   </div>
