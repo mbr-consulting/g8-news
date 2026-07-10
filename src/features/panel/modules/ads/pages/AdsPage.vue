@@ -1,32 +1,42 @@
+<script setup lang="ts">
+import { PageTitle } from '@/features/panel/components'
+import { Table } from '@/features/panel/components/Table'
+
+const columns = ['Nome do Anúncio', 'Data Início', 'Data Fim', 'Localização']
+const rows = [
+  {
+    name: 'Campanha Verão 2024',
+    startDate: '24 Out 2024',
+    endDate: '30 Out 2024',
+    location: 'Homepage',
+  },
+  {
+    name: 'Lançamento Residencial',
+    startDate: '22 Out 2024',
+    endDate: '28 Out 2024',
+    location: 'Sidebar',
+  },
+]
+</script>
+
 <template>
-  <div class="flex-1 overflow-y-auto p-margin-x">
-    <div class="max-w-container-max mx-auto">
-      <!-- Tabs Navigation -->
-      <div class="flex border-b border-outline-variant mb-stack-lg" role="tablist">
-        <button
-          aria-controls="panel-listagem"
-          aria-selected="true"
-          class="px-6 py-4 font-label-lg text-label-lg tab-active transition-colors flex items-center gap-2"
-          id="tab-listagem"
-          role="tab"
-        >
-          <span class="material-symbols-outlined text-[20px]">list</span>
-          Listagem
-        </button>
-        <button
-          aria-controls="panel-criacao"
-          aria-selected="false"
-          class="px-6 py-4 font-label-lg text-label-lg tab-inactive transition-colors flex items-center gap-2"
-          id="tab-criacao"
-          role="tab"
-        >
-          <span class="material-symbols-outlined text-[20px]">add_circle</span>
-          Criação
-        </button>
-      </div>
-      <!-- Tab Panels -->
-      <div class="relative">
-        <!-- Panel: Listagem -->
+  <div class="max-w-container-max mx-auto flex flex-col gap-stack-lg">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-stack-md">
+      <PageTitle
+        title="Listagem de Anúncios"
+        subtitle="Gerencie os anúncios do portal."
+        :button="{ icon: 'add', label: 'Novo Anúncio' }"
+      />
+    </div>
+
+    <Table :columns="columns" :rows="rows" />
+  </div>
+
+  <!-- <div class="flex-1 overflow-y-auto p-margin-x">
+    <div class="max-w-container-max mx-auto"> -->
+  <!-- <div class="flex border-b border-outline-variant mb-stack-lg" role="tablist">
+    
+  <!-- <div class="relative">
         <div
           aria-labelledby="tab-listagem"
           class="block animate-fade-in"
@@ -194,7 +204,6 @@
             </div>
           </div>
         </div>
-        <!-- Panel: Criação -->
         <div
           aria-labelledby="tab-criacao"
           class="hidden-panel animate-fade-in"
@@ -203,7 +212,6 @@
         >
           <div class="bg-surface border border-outline-variant rounded-lg p-8 shadow-sm max-w-4xl">
             <form class="flex flex-col gap-stack-lg">
-              <!-- Section: Basic Info -->
               <div class="flex flex-col gap-stack-md">
                 <h3
                   class="font-headline-sm text-headline-sm text-primary border-b border-outline-variant pb-2"
@@ -224,7 +232,6 @@
                   />
                 </div>
               </div>
-              <!-- Section: Media -->
               <div class="flex flex-col gap-stack-md">
                 <h3
                   class="font-headline-sm text-headline-sm text-primary border-b border-outline-variant pb-2"
@@ -256,7 +263,6 @@
                   </div>
                 </div>
               </div>
-              <!-- Section: Schedule & Location -->
               <div class="flex flex-col gap-stack-md">
                 <h3
                   class="font-headline-sm text-headline-sm text-primary border-b border-outline-variant pb-2"
@@ -328,7 +334,6 @@
                   </div>
                 </div>
               </div>
-              <!-- Form Actions -->
               <div class="flex justify-end gap-4 mt-4 pt-6 border-t border-outline-variant">
                 <button
                   class="px-6 py-2 rounded border border-outline-variant font-label-lg text-label-lg text-on-surface hover:bg-surface-container-high transition-colors"
@@ -347,7 +352,7 @@
             </form>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
+      </div> -->
+  <!-- </div>
+  </div> -->
 </template>
