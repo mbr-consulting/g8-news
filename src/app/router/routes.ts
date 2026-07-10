@@ -1,15 +1,28 @@
 import type { RouteRecordRaw } from 'vue-router'
 import PublicLayout from '../../shared/layouts/PublicLayout.vue'
-import HomePage from '@/features/home/pages/HomePage.vue'
-import PostPage from '@/features/post/pages/PostPage.vue'
-import CitiesPage from '@/features/cities/pages/CitiesPage.vue'
-import ConstructionsPage from '@/features/contructions/pages/ConstructionsPage.vue'
-import ContactPage from '@/features/contact/pages/ContactPage.vue'
-import CityPage from '@/features/city/pages/CityPage.vue'
-import AnnouncementPage from '@/features/announcements/pages/AnnouncementPage.vue'
-import BlogPage from '@/features/blog/pages/BlogPage.vue'
+import HomePage from '@/features/public/home/pages/HomePage.vue'
+import PostPage from '@/features/public/post/pages/PostPage.vue'
+import CitiesPage from '@/features/public/cities/pages/CitiesPage.vue'
+import ConstructionsPage from '@/features/public/contructions/pages/ConstructionsPage.vue'
+import ContactPage from '@/features/public/contact/pages/ContactPage.vue'
+import CityPage from '@/features/public/city/pages/CityPage.vue'
+import AnnouncementPage from '@/features/public/announcements/pages/AnnouncementPage.vue'
+import BlogPage from '@/features/public/blog/pages/BlogPage.vue'
+import LoginPage from '@/features/auth/pages/LoginPage.vue'
+import PanelLayout from '@/shared/layouts/PanelLayout.vue'
+import { PanelDashboardPage, PanelPostsPage, PanelAdsPage, PanelCitiesPage, PanelUsersPage } from '@/features/panel/index.ts'
+import PostForm from '@/features/panel/modules/posts/pages/PostForm.vue'
+import CitiesForm from '@/features/panel/modules/cities/pages/CitiesForm.vue'
+import AdsForm from '@/features/panel/modules/ads/pages/AdsForm.vue'
+
 
 export const routes: RouteRecordRaw[] = [
+  {
+    path: '/login',
+    name: 'Login',
+    component: LoginPage,
+  },
+  // Public routes
   {
     path: '/',
     component: PublicLayout,
@@ -63,6 +76,54 @@ export const routes: RouteRecordRaw[] = [
         path: 'blog',
         name: 'Blog',
         component: BlogPage,
+      },
+    ],
+  },
+  // Panel routes
+  {
+    path: '/panel',
+    name: 'Panel',
+    component: PanelLayout,
+    children: [
+      {
+        path: 'dashboard',
+        name: 'Dashboard',
+        component: PanelDashboardPage,
+      },
+      {
+        path: 'posts',
+        name: 'Posts',
+        component: PanelPostsPage,
+      },
+      {
+        path: 'posts/create',
+        name: 'CreatePost',
+        component: PostForm,
+      },
+      {
+        path: 'ads',
+        name: 'Ads',
+        component: PanelAdsPage,
+      },
+      {
+        path: 'ads/create',
+        name: 'CreateAd',
+        component: AdsForm,
+      },
+      {
+        path: 'cities',
+        name: 'Cities',
+        component: PanelCitiesPage,
+      },
+      {
+        path: 'cities/create',
+        name: 'CreateCities',
+        component: CitiesForm,
+      },
+      {
+        path: 'users',
+        name: 'Users',
+        component: PanelUsersPage,
       },
     ],
   },
