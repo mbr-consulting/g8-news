@@ -1,9 +1,5 @@
 <script lang="ts" setup>
-interface MenuItemProps {
-  icon: string
-  label: string
-  href: string
-}
+import type { MenuItemProps } from '../types';
 
 defineProps<MenuItemProps>()
 </script>
