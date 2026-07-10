@@ -11,5 +11,5 @@ defineProps<PageTitleProps>()
       {{ subtitle }}
     </p>
   </div>
-  <Button v-if="button" :icon="button.icon" :label="button.label" />
+  <Button v-if="button" :icon="button.icon" :label="button.label" :route="button.route" />
 </template>

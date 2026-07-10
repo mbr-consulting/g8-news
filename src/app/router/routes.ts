@@ -11,6 +11,7 @@ import BlogPage from '@/features/public/blog/pages/BlogPage.vue'
 import LoginPage from '@/features/auth/pages/LoginPage.vue'
 import PanelLayout from '@/shared/layouts/PanelLayout.vue'
 import { PanelDashboardPage, PanelPostsPage, PanelAdsPage, PanelCitiesPage, PanelUsersPage } from '@/features/panel/index.ts'
+import PostForm from '@/features/panel/modules/posts/pages/PostForm.vue'
 
 
 export const routes: RouteRecordRaw[] = [
@@ -19,6 +20,7 @@ export const routes: RouteRecordRaw[] = [
     name: 'Login',
     component: LoginPage,
   },
+  // Public routes
   {
     path: '/',
     component: PublicLayout,
@@ -75,6 +77,7 @@ export const routes: RouteRecordRaw[] = [
       },
     ],
   },
+  // Panel routes
   {
     path: '/panel',
     name: 'Panel',
@@ -89,6 +92,11 @@ export const routes: RouteRecordRaw[] = [
         path: 'posts',
         name: 'Posts',
         component: PanelPostsPage,
+      },
+      {
+        path: 'posts/create',
+        name: 'CreatePost',
+        component: PostForm,
       },
       {
         path: 'ads',

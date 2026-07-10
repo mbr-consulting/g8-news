@@ -5,6 +5,7 @@ export interface BadgeProps {
 export interface ButtonProps {
   label: string
   icon?: string
+  route?: object
 }
 
 export interface PageTitleProps {
