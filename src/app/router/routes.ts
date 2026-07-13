@@ -110,16 +110,16 @@ export const routes: RouteRecordRaw[] = [
         name: 'CreateAd',
         component: AdsForm,
       },
-      {
-        path: 'cities',
-        name: 'Cities',
-        component: PanelCitiesPage,
-      },
-      {
-        path: 'cities/create',
-        name: 'CreateCities',
-        component: CitiesForm,
-      },
+      // {
+      //   path: 'cities',
+      //   name: 'Cities',
+      //   component: PanelCitiesPage,
+      // },
+      // {
+      //   path: 'cities/create',
+      //   name: 'CreateCities',
+      //   component: CitiesForm,
+      // },
       {
         path: 'users',
         name: 'Users',
