@@ -1,3 +1,30 @@
+<script setup>
+import { ref, onMounted } from 'vue'
+import 'leaflet/dist/leaflet.css'
+import L from 'leaflet'
+
+const initialMap = ref(null)
+
+onMounted(() => {
+  initialMap.value = L.map('map').setView([-19.64, -40.441], 8)
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+  }).addTo(initialMap.value)
+
+  L.marker([-20.3155, -40.3128]).addTo(initialMap.value).bindPopup('Vitória')
+  L.marker([-20.3297, -40.2925]).addTo(initialMap.value).bindPopup('Vila Velha')
+  L.marker([-20.1286, -40.3078]).addTo(initialMap.value).bindPopup('Serra')
+  L.marker([-20.2632, -40.4165]).addTo(initialMap.value).bindPopup('Cariacica')
+  L.marker([-19.3947, -40.0643]).addTo(initialMap.value).bindPopup('Linhares')
+  L.marker([-18.7211, -39.8587]).addTo(initialMap.value).bindPopup('São Mateus')
+  L.marker([-20.6715, -40.4975]).addTo(initialMap.value).bindPopup('Guarapari')
+  L.marker([-19.9350, -40.6008]).addTo(initialMap.value).bindPopup('Santa Teresa')
+  L.marker([-20.3637, -40.6593]).addTo(initialMap.value).bindPopup('Domingos Martins')
+  L.marker([-19.8200, -40.2739]).addTo(initialMap.value).bindPopup('Aracruz')
+  L.marker([-19.5387, -40.6306]).addTo(initialMap.value).bindPopup('Colatina')
+  L.marker([-19.1897, -40.0973]).addTo(initialMap.value).bindPopup('Sooretama')
+})
+</script>
 <template>
   <main class="w-full max-w-container-max mx-auto px-margin-x py-section-padding">
     <!-- Hero Introduction -->
@@ -39,66 +66,12 @@
       <div
         class="lg:col-span-8 bg-surface-container-low rounded-lg p-6 border border-outline-variant relative overflow-hidden"
       >
-        <div class="absolute top-4 right-6 text-right z-10">
+        <div class="absolute top-7 right-8 text-right z-10">
           <h3 class="font-headline-sm text-headline-sm text-primary">Mapa de Cobertura</h3>
           <p class="font-label-md text-label-md text-on-surface-variant">Espírito Santo, Brasil</p>
         </div>
         <div class="map-container flex items-center justify-center">
-          <!-- SVG Map Placeholder Representing ES State -->
-          <svg
-            class="w-full h-full max-w-md drop-shadow-xl"
-            viewBox="0 0 500 600"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <!-- Simplified ES Map shape with some municipalities -->
-            <RouterLink to="/cidades/vitoria">
-              <path class="municipality-active" d="M250 100 L280 120 L270 160 L230 150 Z"></path>
-            </RouterLink>
-
-            <!-- Pinheiros -->
-            <path class="municipality-inactive" d="M280 120 L310 130 L300 170 L270 160 Z"></path>
-            <path class="municipality-active" d="M230 150 L270 160 L260 210 L220 200 Z"></path>
-            <!-- São Mateus -->
-            <path class="municipality-inactive" d="M190 120 L230 150 L220 200 L180 180 Z"></path>
-            <path class="municipality-active" d="M260 210 L300 230 L280 280 L240 260 Z"></path>
-            <!-- Linhares -->
-            <path class="municipality-inactive" d="M220 200 L260 210 L240 260 L200 240 Z"></path>
-            <path class="municipality-active" d="M240 260 L280 280 L260 340 L220 320 Z"></path>
-            <!-- Aracruz -->
-            <path class="municipality-active" d="M220 320 L260 340 L250 400 L210 380 Z"></path>
-            <!-- Serra -->
-            <path class="municipality-active" d="M250 400 L280 420 L270 460 L230 440 Z"></path>
-            <!-- Vitória / Vila Velha -->
-            <path class="municipality-active" d="M210 380 L250 400 L230 440 L190 420 Z"></path>
-            <!-- Cariacica / Viana -->
-            <path class="municipality-inactive" d="M150 300 L200 320 L180 380 L130 360 Z"></path>
-            <path class="municipality-active" d="M190 420 L230 440 L210 500 L170 480 Z"></path>
-            <!-- Cachoeiro -->
-            <path class="municipality-inactive" d="M170 480 L210 500 L200 550 L160 530 Z"></path>
-            <!-- Callouts for smaller areas -->
-            <g class="text-[10px] font-bold fill-on-surface">
-              <text x="245" y="130">Pinheiros</text>
-              <text x="225" y="185">São Mateus</text>
-              <text x="255" y="260">Linhares</text>
-              <text x="230" y="335">Aracruz</text>
-              <text x="225" y="395">Serra</text>
-              <text x="245" y="445">Vitória</text>
-              <text x="185" y="475">Cachoeiro</text>
-            </g>
-            <!-- Connecting lines for legends -->
-            <line
-              stroke="#717973"
-              stroke-dasharray="2"
-              stroke-width="1"
-              x1="280"
-              x2="350"
-              y1="440"
-              y2="440"
-            ></line>
-            <text class="text-[12px] fill-primary font-bold italic" x="355" y="445">
-              Hub Regional Sul
-            </text>
-          </svg>
+          <div id="map" style="height: 600px; width: 100%"></div>
         </div>
         <!-- Map Legend/Callout for readability -->
         <div
