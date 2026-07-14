@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import type { PageTitleProps } from '../types/index.ts'
-import Button from './Button.vue'
+import LinkTo from './LinkTo.vue'
 
 defineProps<PageTitleProps>()
 </script>
@@ -11,5 +11,5 @@ defineProps<PageTitleProps>()
       {{ subtitle }}
     </p>
   </div>
-  <Button v-if="button" :icon="button.icon" :label="button.label" :route="button.route" />
+  <LinkTo v-if="button" :icon="button.icon" :label="button.label" :route="button.route" />
 </template>

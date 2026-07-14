@@ -3,6 +3,7 @@ import Breadcrumb from './Breadcrumb.vue'
 import Button from './Button.vue'
 import Card from './Card.vue'
 import Header from './Header.vue'
+import LinkTo from './LinkTo.vue'
 import Menu from './Menu.vue'
 import MenuItem from './MenuItem.vue'
 import PageTitle from './PageTitle.vue'
@@ -17,6 +18,7 @@ export {
   Button,
   Card,
   Header,
+  LinkTo,
   MenuItem,
   PageTitle,
   Table,
