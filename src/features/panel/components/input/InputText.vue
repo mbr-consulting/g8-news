@@ -1,5 +1,6 @@
 <script setup lang="ts">
 defineProps<{
+  type: 'text' | 'email' | 'password'
   name: string
   label: string
   placeholder?: string
@@ -7,25 +8,29 @@ defineProps<{
 </script>
 <template>
   <div>
-    <label class="block font-label-md text-label-md text-on-surface-variant mb-1" :for="name"
-      >{{ label }}</label
-    >
+    <label class="block font-label-lg text-label-lg text-primary mb-2">{{ label }}</label>
     <input
-      class="block w-full border-0 border-b border-outline bg-surface-container-low focus:ring-0 focus:border-primary font-body-md text-body-md text-on-surface px-4 py-2 transition-colors"
+      class="input-field form-focus-ring"
       :name="name"
-      :id="name"
       :placeholder="placeholder"
-      type="text"
+      :type="type"
     />
   </div>
 </template>
 <style scoped>
-input:focus,
-textarea:focus,
-select:focus {
-  outline: none !important;
-  box-shadow: none !important;
-  border-bottom-color: #012d1d !important;
+.form-focus-ring:focus {
+  outline: none;
+  border-bottom: 2px solid #012d1d;
+  background-color: #ffffff;
+}
+/* Custom Input Styling to match Brand Aesthetic */
+.input-field {
+  background-color: #f3f4f5;
+  border: none;
+  border-bottom: 1px solid #c1c8c2;
+  padding: 12px 16px;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+  font-family: 'Work Sans', sans-serif;
 }
 </style>
-

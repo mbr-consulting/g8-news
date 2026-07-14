@@ -2,7 +2,7 @@ export interface BadgeProps {
   label: string
   type?: 'default' | 'primary' | 'secondary' | 'success' | 'warning' | 'error'
 }
-export interface ButtonProps {
+export interface LinkProps {
   label: string
   icon?: string
   route?: object
