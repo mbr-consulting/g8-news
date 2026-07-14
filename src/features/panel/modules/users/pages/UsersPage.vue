@@ -8,7 +8,7 @@ import { PageTitle } from '@/features/panel/components'
       <PageTitle
         title="Listagem de Usuários"
         subtitle="Gerencie os usuários do portal."
-        :button="{ icon: 'add', label: 'Novo Usuário' }"
+        :button="{ icon: 'add', label: 'Novo Usuário', route: { name: 'CreateUser' } }"
       />
     </div>
   </div>
