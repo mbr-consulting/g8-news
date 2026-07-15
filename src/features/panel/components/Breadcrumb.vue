@@ -2,7 +2,7 @@
 defineProps<{
   crumbs: {
     name: string
-    to: { name: string }
+    to?: { name: string }
   }[]
 }>()
 </script>
