@@ -7,7 +7,7 @@ defineProps<{
 }>()
 </script>
 <template>
-  <div class="flex flex-col gap-stack-sm mt-2">
+  <div class="w-full flex flex-col gap-stack-sm">
     <label class="font-label-md text-label-md text-on-surface-variant" for="tipo">{{
       label
     }}</label>

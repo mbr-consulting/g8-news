@@ -6,7 +6,7 @@ defineProps<{
 }>()
 </script>
 <template>
-  <div class="flex flex-col gap-stack-sm">
+  <div class="w-full flex flex-col gap-stack-sm">
     <label class="font-label-md text-label-md text-on-surface-variant" for="name">{{
       label
     }}</label>

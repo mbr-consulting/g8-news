@@ -9,6 +9,7 @@ import Menu from './Menu.vue'
 import MenuItem from './MenuItem.vue'
 import PageTitle from './PageTitle.vue'
 import Table from './Table/Table.vue'
+import Title from './Title.vue'
 
 import InputText from './input/InputText.vue'
 import InputCheckbox from './input/InputCheckbox.vue'
@@ -29,6 +30,7 @@ export {
   MenuItem,
   PageTitle,
   Table,
+  Title,
   InputText,
   InputCheckbox,
   Breadcrumb,

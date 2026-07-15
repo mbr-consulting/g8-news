@@ -1,34 +1,30 @@
 <script setup lang="ts">
-import { PageTitle } from '@/features/panel/components'
-import { Table } from '@/features/panel/components/Table'
+import { Breadcrumb, PageTitle } from '@/features/panel/components'
 
-const columns = ['Nome do Anúncio', 'Data Início', 'Data Fim', 'Localização']
-const rows = [
-  {
-    name: 'Campanha Verão 2024',
-    startDate: '24 Out 2024',
-    endDate: '30 Out 2024',
-    location: 'Homepage',
-  },
-  {
-    name: 'Lançamento Residencial',
-    startDate: '22 Out 2024',
-    endDate: '28 Out 2024',
-    location: 'Sidebar',
-  },
-]
+// const columns = ['Nome do Anúncio', 'Data Início', 'Data Fim', 'Localização']
+// const rows = [
+//   {
+//     name: 'Campanha Verão 2024',
+//     startDate: '24 Out 2024',
+//     endDate: '30 Out 2024',
+//     location: 'Homepage',
+//   },
+//   {
+//     name: 'Lançamento Residencial',
+//     startDate: '22 Out 2024',
+//     endDate: '28 Out 2024',
+//     location: 'Sidebar',
+//   },
+// ]
 </script>
 
 <template>
-  <div class="max-w-container-max mx-auto flex flex-col gap-stack-lg">
-    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-stack-md">
-      <PageTitle
-        title="Listagem de Anúncios"
-        subtitle="Gerencie os anúncios do portal."
-        :button="{ icon: 'add', label: 'Novo Anúncio', route: { name: 'CreateAd' } }"
-      />
-    </div>
-  </div>
+  <Breadcrumb :crumbs="[{ name: 'Anúncios' }]" />
+  <PageTitle
+    title="Listagem de Anúncios"
+    subtitle="Gerencie os anúncios do portal."
+    :button="{ icon: 'add', label: 'Novo Anúncio', route: { name: 'CreateAd' } }"
+  />
 
   <!-- <div class="flex-1 overflow-y-auto p-margin-x">
     <div class="max-w-container-max mx-auto"> -->
