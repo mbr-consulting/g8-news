@@ -5,7 +5,7 @@ import LinkTo from './LinkTo.vue'
 defineProps<PageTitleProps>()
 </script>
 <template>
-  <div class="max-w-container-max mx-auto flex flex-col gap-stack-lg">
+  <div class="max-w-container-max mx-auto flex flex-col gap-stack-lg mb-5">
     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-stack-md">
       <div>
         <h1 class="font-headline-lg text-headline-lg text-primary">{{ title }}</h1>
