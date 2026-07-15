@@ -14,12 +14,15 @@ defineProps<{
     <div
       class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-outline-variant border-dashed rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer group"
     >
-      <div class="space-y-1 text-center">
-        <span
-          class="material-symbols-outlined text-outline text-4xl group-hover:text-primary transition-colors"
-          data-icon="upload_file"
-          >upload_file</span
+      <div class="flex flex-col items-center space-y-1 text-center">
+        <div
+          class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center mb-4 group-hover:bg-primary-container transition-colors"
         >
+          <span
+            class="material-symbols-outlined text-3xl text-on-surface-variant group-hover:text-on-primary-container"
+            >cloud_upload</span
+          >
+        </div>
         <div class="flex font-body-sm text-body-sm text-on-surface justify-center">
           <span
             class="relative cursor-pointer bg-transparent rounded-md font-medium text-primary hover:text-primary-container focus-within:outline-none"
