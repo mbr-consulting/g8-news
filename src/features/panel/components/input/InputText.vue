@@ -7,7 +7,7 @@ defineProps<{
 }>()
 </script>
 <template>
-  <div>
+  <div class="w-full">
     <label class="block font-label-lg text-label-lg text-primary mb-2">{{ label }}</label>
     <input
       class="input-field form-focus-ring"
