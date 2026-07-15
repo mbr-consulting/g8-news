@@ -2,7 +2,7 @@ import type { RouteRecordRaw } from 'vue-router'
 import PublicLayout from '../../shared/layouts/PublicLayout.vue'
 import HomePage from '@/features/public/home/pages/HomePage.vue'
 import PostPage from '@/features/public/post/pages/PostPage.vue'
-import CitiesPage from '@/features/public/cities/pages/CitiesPage.vue'
+// import CitiesPage from '@/features/public/cities/pages/CitiesPage.vue'
 import ConstructionsPage from '@/features/public/contructions/pages/ConstructionsPage.vue'
 import ContactPage from '@/features/public/contact/pages/ContactPage.vue'
 import CityPage from '@/features/public/city/pages/CityPage.vue'
@@ -14,12 +14,12 @@ import {
   PanelDashboardPage,
   PanelPostsPage,
   PanelAdsPage,
-  // PanelCitiesPage,
+  PanelCitiesPage,
   PanelUsersPage,
   PanelUsersForm,
 } from '@/features/panel/index.ts'
 import PostForm from '@/features/panel/modules/posts/pages/PostForm.vue'
-// import CitiesForm from '@/features/panel/modules/cities/pages/CitiesForm.vue'
+import CitiesForm from '@/features/panel/modules/cities/pages/CitiesForm.vue'
 import AdsForm from '@/features/panel/modules/ads/pages/AdsForm.vue'
 
 export const routes: RouteRecordRaw[] = [
@@ -38,11 +38,11 @@ export const routes: RouteRecordRaw[] = [
         name: 'Home',
         component: HomePage,
       },
-      {
-        path: 'cidades',
-        name: 'Cities',
-        component: CitiesPage,
-      },
+      // {
+      //   path: 'cidades',
+      //   name: 'Cities',
+      //   component: CitiesPage,
+      // },
       {
         path: 'cidades/:city',
         name: 'City',
@@ -116,16 +116,16 @@ export const routes: RouteRecordRaw[] = [
         name: 'CreateAd',
         component: AdsForm,
       },
-      // {
-      //   path: 'cities',
-      //   name: 'Cities',
-      //   component: PanelCitiesPage,
-      // },
-      // {
-      //   path: 'cities/create',
-      //   name: 'CreateCities',
-      //   component: CitiesForm,
-      // },
+      {
+        path: 'cities',
+        name: 'Cities',
+        component: PanelCitiesPage,
+      },
+      {
+        path: 'cities/create',
+        name: 'CreateCities',
+        component: CitiesForm,
+      },
       {
         path: 'users',
         name: 'Users',
