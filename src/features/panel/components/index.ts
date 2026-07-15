@@ -16,6 +16,7 @@ import InputFile from './input/InputFile.vue'
 import InputTag from './input/InputTag.vue'
 import InputDate from './input/InputDate.vue'
 import InputSelect from './input/InputSelect.vue'
+import InputTextarea from './input/InputTextarea.vue'
 
 export {
   Menu,
@@ -35,4 +36,5 @@ export {
   InputTag,
   InputDate,
   InputSelect,
+  InputTextarea,
 }
