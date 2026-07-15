@@ -33,18 +33,17 @@ defineProps<{
 </template>
 <style lang="css" scoped>
 .input-signature {
+  background-color: #f3f4f5;
   border: none;
-  border-bottom: 2px solid transparent;
+  border-bottom: 1px solid #c1c8c2;
   border-radius: 0.125rem 0.125rem 0 0;
-  background-color: var(--tw-colors-surface-container-low);
   transition:
     border-color 0.2s ease,
     background-color 0.2s ease;
 }
 .input-signature:focus {
   outline: none;
-  box-shadow: none;
-  border-bottom-color: var(--tw-colors-primary);
-  background-color: var(--tw-colors-surface-container);
+  border-bottom: 2px solid #012d1d;
+  background-color: #ffffff;
 }
 </style>
