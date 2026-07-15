@@ -10,11 +10,17 @@ import AnnouncementPage from '@/features/public/announcements/pages/Announcement
 import BlogPage from '@/features/public/blog/pages/BlogPage.vue'
 import LoginPage from '@/features/auth/pages/LoginPage.vue'
 import PanelLayout from '@/shared/layouts/PanelLayout.vue'
-import { PanelDashboardPage, PanelPostsPage, PanelAdsPage, PanelCitiesPage, PanelUsersPage } from '@/features/panel/index.ts'
+import {
+  PanelDashboardPage,
+  PanelPostsPage,
+  PanelAdsPage,
+  // PanelCitiesPage,
+  PanelUsersPage,
+  PanelUsersForm,
+} from '@/features/panel/index.ts'
 import PostForm from '@/features/panel/modules/posts/pages/PostForm.vue'
-import CitiesForm from '@/features/panel/modules/cities/pages/CitiesForm.vue'
+// import CitiesForm from '@/features/panel/modules/cities/pages/CitiesForm.vue'
 import AdsForm from '@/features/panel/modules/ads/pages/AdsForm.vue'
-
 
 export const routes: RouteRecordRaw[] = [
   {
@@ -124,6 +130,11 @@ export const routes: RouteRecordRaw[] = [
         path: 'users',
         name: 'Users',
         component: PanelUsersPage,
+      },
+      {
+        path: 'users/create',
+        name: 'CreateUser',
+        component: PanelUsersForm,
       },
     ],
   },
