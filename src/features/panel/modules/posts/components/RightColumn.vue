@@ -1,6 +1,12 @@
 <script setup lang="ts">
-import { Card, InputDate, InputFile, InputSelect, InputTag } from '@/features/panel/components'
-import { Title } from '.'
+import {
+  Card,
+  InputDate,
+  InputFile,
+  InputSelect,
+  InputTag,
+  Title,
+} from '@/features/panel/components'
 </script>
 
 <template>
