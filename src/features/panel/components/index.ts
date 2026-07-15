@@ -11,6 +11,7 @@ import Table from './Table/Table.vue'
 
 import InputText from './input/InputText.vue'
 import InputCheckbox from './input/InputCheckbox.vue'
+import InputFile from './input/InputFile.vue'
 
 export {
   Menu,
@@ -25,4 +26,5 @@ export {
   InputText,
   InputCheckbox,
   Breadcrumb,
+  InputFile,
 }
