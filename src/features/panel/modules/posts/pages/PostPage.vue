@@ -46,6 +46,14 @@ const posts = ref([
     status: 'archived' as const,
   },
 ])
+
+function handleEdit(row: (typeof posts.value)[number]) {
+  console.log('Editando post:', row)
+}
+
+function handleRemove(row: (typeof posts.value)[number]) {
+  console.log('Removendo post:', row)
+}
 </script>
 
 <template>
@@ -54,7 +62,15 @@ const posts = ref([
     subtitle="Gerencie as publicações editoriais e notícias do portal."
     :button="{ icon: 'add', label: 'Novo Post', route: { name: 'CreatePost' } }"
   />
-  <Table :headers="{ columns }" :data="posts" actions>
+  <Table
+    :headers="{ columns }"
+    :data="posts"
+    actions
+    remove
+    edit
+    :onEdit="handleEdit"
+    :onRemove="handleRemove"
+  >
     <!-- Customizing table cells -->
     <template #cell(title)="{ row }">
       <p

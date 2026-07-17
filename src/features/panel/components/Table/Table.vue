@@ -23,7 +23,14 @@ defineProps<TableProps<T>>()
               </slot>
             </td>
             <td v-if="actions">
-              <ActionsColumn />
+              <ActionsColumn
+                :edit="edit"
+                :onEdit="() => onEdit?.(row)"
+                :remove="remove"
+                :onRemove="() => onRemove?.(row)"
+                :view="view"
+                :onView="() => onView?.(row)"
+              />
             </td>
           </tr>
         </tbody>

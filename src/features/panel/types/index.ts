@@ -25,6 +25,12 @@ export interface TableProps<T extends Record<string, unknown>> {
   headers: TableHeadProps
   data: T[]
   actions?: boolean
+  remove?: boolean
+  edit?: boolean
+  view?: boolean
+  onRemove?: (row: T) => void
+  onEdit?: (row: T) => void
+  onView?: (row: T) => void
 }
 
 export interface TableHeadColumnProps {
