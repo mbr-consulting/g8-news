@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Table, PageTitle } from '@/features/panel/components'
+import { Table, PageTitle, Breadcrumb } from '@/features/panel/components'
 import type { TableHeadColumnProps } from '@/features/panel/types'
 import { ref } from 'vue'
 import { PostStatus, PostType } from '../components'
@@ -57,6 +57,7 @@ function handleRemove(row: (typeof posts.value)[number]) {
 </script>
 
 <template>
+  <Breadcrumb :crumbs="[{ name: 'Posts', to: { name: 'Posts' } }]" />
   <PageTitle
     title="Listagem de Posts"
     subtitle="Gerencie as publicações editoriais e notícias do portal."
