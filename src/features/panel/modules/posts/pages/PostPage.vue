@@ -57,7 +57,7 @@ function handleRemove(row: (typeof posts.value)[number]) {
 </script>
 
 <template>
-  <Breadcrumb :crumbs="[{ name: 'Posts', to: { name: 'Posts' } }]" />
+  <Breadcrumb :crumbs="[{ name: 'Artigos' }]" />
   <PageTitle
     title="Listagem de Posts"
     subtitle="Gerencie as publicações editoriais e notícias do portal."
