@@ -1,15 +1,8 @@
-<script lang="ts" setup>
-import type { RowsProps } from '../../types/index.ts'
-import TableBody from './TableBody.vue'
-import TableHead from './TableHead.vue'
+<script lang="ts" setup generic="T extends Record<string, unknown>">
+import { ActionsColumn, TableHead } from '..'
+import type { TableProps } from '../../types/index.ts'
 
-interface TableProps {
-  columns: string[]
-  rows: RowsProps
-  actions: boolean
-}
-
-defineProps<TableProps>()
+defineProps<TableProps<T>>()
 </script>
 <template>
   <div
@@ -17,9 +10,32 @@ defineProps<TableProps>()
   >
     <div class="overflow-x-auto">
       <table class="w-full text-left border-collapse">
-        <TableHead :columns="columns" />
-        <TableBody :rows="rows" />
+        <TableHead :columns="headers.columns" :action="actions" />
+        <tbody>
+          <tr
+            class="hover:bg-surface-container-lowest transition-colors bg-surface-container-lowest"
+            v-for="(row, rowIndex) in data"
+            :key="row.id || rowIndex"
+          >
+            <td class="py-4 px-4" v-for="col in headers.columns" :key="col.id">
+              <slot :name="`cell(${col.id})`" :row="row" :value="row[col.id]">
+                {{ row[col.id] }}
+              </slot>
+            </td>
+            <td v-if="actions">
+              <ActionsColumn
+                :edit="edit"
+                :onEdit="() => onEdit?.(row)"
+                :remove="remove"
+                :onRemove="() => onRemove?.(row)"
+                :view="view"
+                :onView="() => onView?.(row)"
+              />
+            </td>
+          </tr>
+        </tbody>
       </table>
     </div>
+    <Pagination />
   </div>
 </template>
