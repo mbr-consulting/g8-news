@@ -13,7 +13,7 @@ defineProps<TableProps<T>>()
         <TableHead :columns="headers.columns" :action="actions" />
         <tbody>
           <tr
-            class="hover:bg-surface-container-lowest transition-colors bg-surface-container-lowest"
+            class="hover:bg-surface-container-lowest transition-colors bg-surface-container-lowest border-b border-outline-variant"
             v-for="(row, rowIndex) in data"
             :key="row.id || rowIndex"
           >
