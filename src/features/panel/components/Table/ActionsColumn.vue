@@ -9,7 +9,7 @@ defineProps<{
 }>()
 </script>
 <template>
-  <div class="flex items-center justify-end p-1 gap-1">
+  <div class="flex items-center justify-end pr-2 gap-1">
     <!-- view button -->
     <button
       v-if="view"
