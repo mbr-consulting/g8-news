@@ -1,6 +1,7 @@
 <script lang="ts" setup>
-import type { BadgeProps } from '../types'
-defineProps<BadgeProps>()
+import type { PanelBadgeProps } from '@/shared/types'
+
+defineProps<PanelBadgeProps>()
 
 const variantClasses = {
   default: 'bg-surface-container-high text-on-surface',

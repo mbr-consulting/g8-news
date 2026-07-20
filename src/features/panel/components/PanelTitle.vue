@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { PageTitleProps } from '../types/index.ts'
+import type { PageTitleProps } from '../../../shared/types/index.ts'
 import LinkTo from './LinkTo.vue'
 
 defineProps<PageTitleProps>()

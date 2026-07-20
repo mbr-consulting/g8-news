@@ -1,6 +1,6 @@
 <script lang="ts" setup generic="T extends Record<string, unknown>">
-import { ActionsColumn, TableHead } from '..'
-import type { TableProps } from '../../types/index.ts'
+import { ActionsColumn, TableHead } from '../index.ts'
+import type { TableProps } from '../../../../shared/types/index.ts'
 
 defineProps<TableProps<T>>()
 </script>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { TableHeadProps } from '../../types'
+import type { TableHeadProps } from '../../../../shared/types'
 
 defineProps<TableHeadProps>()
 </script>
