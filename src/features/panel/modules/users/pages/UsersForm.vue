@@ -30,15 +30,11 @@ function handleSubmit(event: Event) {
 
 <template>
   <Breadcrumb :crumbs="breadcrumbItem" />
-  <div class="max-w-container-max mx-auto flex flex-col gap-stack-lg">
-    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-stack-md">
-      <PageTitle
-        title="Cadastrar Novo Usuário"
-        subtitle="Preencha as informações abaixo para adicionar um novo membro à equipe editorial do G8 News."
-        :button="{ icon: 'arrow_back', label: 'Voltar', route: { name: 'Users' } }"
-      />
-    </div>
-  </div>
+  <PageTitle
+    title="Cadastrar Novo Usuário"
+    subtitle="Preencha as informações abaixo para adicionar um novo membro à equipe editorial do G8 News."
+    :button="{ icon: 'arrow_back', label: 'Voltar', route: { name: 'Users' } }"
+  />
 
   <div class="mt-10">
     <Card>
