@@ -1,8 +1,7 @@
 <script setup lang="ts">
-defineProps<{
-  name: string
-  label: string
-}>()
+import type { InputCheckboxProps } from '@/shared/types'
+
+defineProps<InputCheckboxProps>()
 </script>
 <template>
   <label class="flex items-center gap-3 cursor-pointer group">

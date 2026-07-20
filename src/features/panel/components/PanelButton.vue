@@ -1,10 +1,7 @@
 <script lang="ts" setup>
-defineProps<{
-  type: 'button' | 'submit' | 'reset'
-  variant: 'outline' | 'primary' | 'secondary' | 'success' | 'warning' | 'error'
-  label: string
-  icon?: string
-}>()
+import type { PanelButtonProps } from '@/shared/types'
+
+defineProps<PanelButtonProps>()
 
 const variantClasses = {
   primary:

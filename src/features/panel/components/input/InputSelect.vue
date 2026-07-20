@@ -1,10 +1,7 @@
 <script setup lang="ts">
-defineProps<{
-  label: string
-  name: string
-  value?: string
-  options?: Array<{ value: string; label: string }>
-}>()
+import type { InputSelectProps } from '@/shared/types'
+
+defineProps<InputSelectProps>()
 </script>
 <template>
   <div class="w-full flex flex-col gap-stack-sm">

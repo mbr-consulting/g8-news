@@ -1,10 +1,7 @@
 <script lang="ts" setup>
-defineProps<{
-  label?: string
-  name: string
-  title: string
-  subtitle?: string
-}>()
+import type { InputFileProps } from '@/shared/types'
+
+defineProps<InputFileProps>()
 </script>
 <template>
   <div>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Table, PageTitle, Breadcrumb } from '@/features/panel/components'
-import type { TableHeadColumnProps } from '@/features/panel/types'
+import type { TableHeadColumnProps } from '@/shared/types'
 import { ref } from 'vue'
 import { PostStatus, PostType } from '../components'
 

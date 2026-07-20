@@ -1,10 +1,7 @@
 <script lang="ts" setup>
-defineProps<{
-  crumbs: {
-    name: string
-    to?: { name: string }
-  }[]
-}>()
+import type { PanelBreadcrumbProps } from '@/shared/types'
+
+defineProps<PanelBreadcrumbProps>()
 </script>
 <template>
   <nav class="flex items-center gap-2 text-on-surface-variant font-label-md text-label-md mb-2">

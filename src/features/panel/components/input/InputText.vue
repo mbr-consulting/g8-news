@@ -1,10 +1,7 @@
 <script setup lang="ts">
-defineProps<{
-  type: 'text' | 'email' | 'password'
-  name: string
-  label: string
-  placeholder?: string
-}>()
+import type { InputTextProps } from '@/shared/types'
+
+defineProps<InputTextProps>()
 </script>
 <template>
   <div class="w-full">

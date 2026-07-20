@@ -1,9 +1,7 @@
 <script setup lang="ts">
-defineProps<{
-  label: string
-  name: string
-  value?: string
-}>()
+import type { InputDateProps } from '@/shared/types'
+
+defineProps<InputDateProps>()
 </script>
 <template>
   <div class="w-full flex flex-col gap-stack-sm">

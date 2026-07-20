@@ -1,12 +1,7 @@
 <script setup lang="ts">
-defineProps<{
-  name: string
-  label: string
-  placeholder?: string
-  value?: string
-  cols?: number
-  rows?: number
-}>()
+import type { InputTextareaProps } from '@/shared/types'
+
+defineProps<InputTextareaProps>()
 </script>
 <template>
   <div class="flex flex-col gap-stack-sm h-full">

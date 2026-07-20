@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { MenuItemProps } from '../types';
+import type { MenuItemProps } from '@/shared/types'
 
 defineProps<MenuItemProps>()
 </script>

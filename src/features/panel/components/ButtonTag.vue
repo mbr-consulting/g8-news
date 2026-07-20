@@ -1,7 +1,7 @@
 <script setup lang="ts">
-defineProps<{
-  title: string
-}>()
+import type { ButtonTagProps } from '@/shared/types'
+
+defineProps<ButtonTagProps>()
 
 /**
  * TODO: Implementar auto remoção
