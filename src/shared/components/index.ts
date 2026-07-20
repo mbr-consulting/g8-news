@@ -1,6 +1,6 @@
-import Announcement from './AnnouncementSection.vue'
+import AnnouncementSection from './AdsSection.vue'
 import PostCard from './PostCard.vue'
-import Menu from './Menu.vue'
+import Menu from './PublicMenu.vue'
 import MenuItem from './MenuItem.vue'
 
-export { Announcement, PostCard, Menu, MenuItem }
+export { AnnouncementSection, PostCard, Menu, MenuItem }

@@ -1,4 +1,4 @@
-<script setup>
+<script lang="ts" setup>
 import { ref, onMounted } from 'vue'
 import 'leaflet/dist/leaflet.css'
 import L from 'leaflet'
