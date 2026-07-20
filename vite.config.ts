@@ -11,6 +11,10 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
+      '@types': fileURLToPath(new URL('./src/shared/types', import.meta.url)),
+      '@panel/components': fileURLToPath(
+        new URL('./src/features/panel/components', import.meta.url),
+      ),
     },
   },
 })
