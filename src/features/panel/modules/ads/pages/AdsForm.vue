@@ -29,7 +29,7 @@ const adsLocations = [
     subtitle="Preencha os dados abaixo para configurar uma nova campanha publicitária. Verifique as dimensões recomendadas antes de realizar o upload."
     :button="{ icon: 'arrow_back', label: 'Voltar', route: { name: 'Ads' } }"
   />
-  
+
   <Card>
     <Title title="Informações Gerais" />
     <form class="flex flex-col gap-stack-lg mt-5">

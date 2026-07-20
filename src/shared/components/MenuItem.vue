@@ -7,9 +7,7 @@ interface MenuItem {
 defineProps<MenuItem>()
 </script>
 <template>
-  <RouterLink
-    :to="href"
-  >
+  <RouterLink :to="href">
     <a class="text-on-surface-variant hover:text-primary transition-colors pb-1">{{ label }}</a>
   </RouterLink>
 </template>

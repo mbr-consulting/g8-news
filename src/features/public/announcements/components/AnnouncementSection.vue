@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { SectionProps } from '../types/index.ts'
-import SectionItem from './SectionItem.vue';
+import SectionItem from './SectionItem.vue'
 
 defineProps<SectionProps>()
 </script>

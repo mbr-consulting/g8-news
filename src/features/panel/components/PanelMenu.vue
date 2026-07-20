@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import MenuItem from './MenuItem.vue';
-
+import MenuItem from './MenuItem.vue'
 </script>
 <template>
   <nav
@@ -17,7 +16,6 @@ import MenuItem from './MenuItem.vue';
         <MenuItem icon="campaign" label="Anúncios" href="/panel/ads" />
         <MenuItem icon="location_city" label="Cidades" href="/panel/cities" />
         <MenuItem icon="group" label="Usuários" href="/panel/users" />
-
 
         <!-- Posts (Active) -->
         <!-- <li>

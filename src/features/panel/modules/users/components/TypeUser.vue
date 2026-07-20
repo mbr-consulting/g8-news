@@ -26,7 +26,6 @@ import { RadioType } from '.'
         description="Cria e edita apenas seus próprios artigos."
         value="author"
       />
-      
     </div>
   </div>
 </template>

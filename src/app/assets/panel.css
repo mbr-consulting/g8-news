@@ -64,17 +64,17 @@
   --spacing-container-max: 1280px;
 
   /* Font Families */
-  --font-label-lg: "Work Sans", sans-serif;
-  --font-label-md: "Work Sans", sans-serif;
-  --font-body-sm: "Work Sans", sans-serif;
-  --font-body-md: "Work Sans", sans-serif;
-  --font-body-lg: "Work Sans", sans-serif;
+  --font-label-lg: 'Work Sans', sans-serif;
+  --font-label-md: 'Work Sans', sans-serif;
+  --font-body-sm: 'Work Sans', sans-serif;
+  --font-body-md: 'Work Sans', sans-serif;
+  --font-body-lg: 'Work Sans', sans-serif;
 
-  --font-headline-lg-mobile: "Source Serif 4", serif;
-  --font-headline-sm: "Source Serif 4", serif;
-  --font-headline-md: "Source Serif 4", serif;
-  --font-headline-lg: "Source Serif 4", serif;
-  --font-display-lg: "Source Serif 4", serif;
+  --font-headline-lg-mobile: 'Source Serif 4', serif;
+  --font-headline-sm: 'Source Serif 4', serif;
+  --font-headline-md: 'Source Serif 4', serif;
+  --font-headline-lg: 'Source Serif 4', serif;
+  --font-display-lg: 'Source Serif 4', serif;
 
   /* Font Sizes */
   --text-label-lg: 14px;
