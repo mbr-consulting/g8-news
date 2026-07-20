@@ -15,7 +15,7 @@ const rows = [
     startDate: '24 Out 2024',
     endDate: '30 Out 2024',
     location: 'Homepage',
-    imageUrl: 'https://via.placeholder.com/150',
+    imageUrl: 'https://picsum.photos/200',
   },
   {
     name: 'Lançamento Residencial',
