@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Breadcrumb, PageTitle, Table } from '@/features/panel/components'
-import type { TableHeadColumnProps } from '@/features/panel/types'
+import type { TableHeadColumnProps } from '@/shared/types'
 import { UserColumnType } from '../components'
 
 const columns: TableHeadColumnProps[] = [

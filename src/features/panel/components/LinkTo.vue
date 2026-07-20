@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { LinkToProps } from '../types'
+import type { LinkToProps } from '@/shared/types'
 
 defineProps<LinkToProps>()
 </script>
