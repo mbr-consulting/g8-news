@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { Button, Card, InputText, InputTextarea } from '@/features/panel/components'
+import { PanelButton, PanelCard, InputText, InputTextarea } from '@/features/panel/components'
 </script>
 
 <template>
   <div class="md:col-span-8 flex flex-col gap-stack-lg">
-    <Card>
+    <PanelCard>
       <div class="flex flex-col gap-stack-md">
         <InputText
           type="text"
@@ -26,9 +26,9 @@ import { Button, Card, InputText, InputTextarea } from '@/features/panel/compone
         />
       </div>
       <div class="flex justify-end gap-4 mt-6">
-        <Button variant="primary" type="submit" label="Publicar Agora" />
-        <Button variant="outline" type="button" label="Salvar Rascunho" />
+        <PanelButton variant="primary" type="submit" label="Publicar Agora" />
+        <PanelButton variant="outline" type="button" label="Salvar Rascunho" />
       </div>
-    </Card>
+    </PanelCard>
   </div>
 </template>

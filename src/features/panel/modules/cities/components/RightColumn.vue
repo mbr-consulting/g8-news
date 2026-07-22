@@ -1,11 +1,18 @@
 <script setup lang="ts">
-import { Card, InputFile, InputText, InputSelect, Title, Button } from '@/features/panel/components'
+import {
+  PanelCard,
+  InputFile,
+  InputText,
+  InputSelect,
+  PanelTitle,
+  PanelButton,
+} from '@/features/panel/components'
 </script>
 
 <template>
   <div class="md:col-span-4 flex flex-col gap-stack-lg">
-    <Card>
-      <Title title="Novo Anunciante" icon="storefront" />
+    <PanelCard>
+      <PanelTitle title="Novo Anunciante" icon="storefront" />
       <div>
         <InputFile
           name=""
@@ -25,8 +32,8 @@ import { Card, InputFile, InputText, InputSelect, Title, Button } from '@/featur
         <InputSelect label="Cidade" name="ads_city" />
       </div>
       <div class="flex justify-center mt-stack-lg">
-        <Button type="button" variant="primary" label="Adicionar Anunciante" icon="add" />
+        <PanelButton type="button" variant="primary" label="Adicionar Anunciante" icon="add" />
       </div>
-    </Card>
+    </PanelCard>
   </div>
 </template>

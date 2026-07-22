@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { Badge } from '@/features/panel/components'
-defineProps<{
-  type: 'admin' | 'editor' | 'author'
-}>()
+import { PanelBadge } from '@/features/panel/components'
+import type { UserColumnTypeProps } from '@/shared/types'
+
+defineProps<UserColumnTypeProps>()
 </script>
 
 <template>
-  <Badge :label="type" />
+  <PanelBadge :label="type" />
 </template>

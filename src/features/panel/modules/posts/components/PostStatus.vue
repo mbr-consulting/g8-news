@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Badge } from '@/features/panel/components'
+import { PanelBadge } from '@/features/panel/components'
 
 defineProps<{
   type: 'published' | 'draft' | 'pending' | 'archived'
@@ -17,5 +17,5 @@ const statusMap: Record<
 </script>
 
 <template>
-  <Badge :label="statusMap[type].label" :variant="statusMap[type].variant" />
+  <PanelBadge :label="statusMap[type].label" :variant="statusMap[type].variant" />
 </template>

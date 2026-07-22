@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import {
-  Breadcrumb,
-  Button,
-  Card,
+  PanelBreadcrumb,
+  PanelButton,
+  PanelCard,
   InputCheckbox,
   InputText,
   PageTitle,
@@ -29,7 +29,7 @@ function handleSubmit(event: Event) {
 </script>
 
 <template>
-  <Breadcrumb :crumbs="breadcrumbItem" />
+  <PanelBreadcrumb :crumbs="breadcrumbItem" />
   <PageTitle
     title="Cadastrar Novo Usuário"
     subtitle="Preencha as informações abaixo para adicionar um novo membro à equipe editorial do G8 News."
@@ -37,7 +37,7 @@ function handleSubmit(event: Event) {
   />
 
   <div class="mt-10">
-    <Card>
+    <PanelCard>
       <form class="space-y-stack-md" @submit="handleSubmit">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
           <InputText
@@ -63,10 +63,10 @@ function handleSubmit(event: Event) {
         <div
           class="pt-8 flex flex-col sm:flex-row items-center justify-end gap-4 border-t border-outline-variant"
         >
-          <Button type="button" label="Cancelar" variant="outline" />
-          <Button type="submit" label="Salvar Usuário" variant="primary" />
+          <PanelButton type="button" label="Cancelar" variant="outline" />
+          <PanelButton type="submit" label="Salvar Usuário" variant="primary" />
         </div>
       </form>
-    </Card>
+    </PanelCard>
   </div>
 </template>

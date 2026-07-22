@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { Breadcrumb, PageTitle } from '@/features/panel/components'
+import { PanelBreadcrumb, PageTitle } from '@/features/panel/components'
 import { LeftColumn, RightColumn } from '../components'
 </script>
 
 <template>
-  <Breadcrumb
+  <PanelBreadcrumb
     :crumbs="[{ name: 'Artigos', to: { name: 'Posts' } }, { name: 'Criar novo artigo' }]"
   />
   <PageTitle

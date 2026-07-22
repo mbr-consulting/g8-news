@@ -1,10 +1,12 @@
 <script setup lang="ts">
-import { Breadcrumb, PageTitle } from '@/features/panel/components'
+import { PanelBreadcrumb, PageTitle } from '@/features/panel/components'
 import { LeftColumn, RightColumn } from '../components'
 </script>
 
 <template>
-  <Breadcrumb :crumbs="[{ name: 'Cidades', to: { name: 'Cities' } }, { name: 'Nova Cidade' }]" />
+  <PanelBreadcrumb
+    :crumbs="[{ name: 'Cidades', to: { name: 'Cities' } }, { name: 'Nova Cidade' }]"
+  />
   <PageTitle
     title=" Configuração de Cidades e Anunciantes"
     subtitle="Gerencie os vínculos de cidades e o diretório de anunciantes locais."

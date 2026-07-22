@@ -1,11 +1,17 @@
 <script setup lang="ts">
-import { Button, Card, InputFile, InputText, Title } from '@/features/panel/components'
+import {
+  PanelButton,
+  PanelCard,
+  InputFile,
+  InputText,
+  PanelTitle,
+} from '@/features/panel/components'
 </script>
 
 <template>
   <div class="md:col-span-8 flex flex-col gap-stack-lg">
-    <Card>
-      <Title title="Vínculo de Cidade" icon="location_city" />
+    <PanelCard>
+      <PanelTitle title="Vínculo de Cidade" icon="location_city" />
       <div class="mt-2">
         <InputFile
           label="Brasão da Cidade"
@@ -43,9 +49,9 @@ import { Button, Card, InputFile, InputText, Title } from '@/features/panel/comp
         />
       </div>
       <div class="w-full flex flex-row justify-end gap-stack-md mt-5">
-        <Button type="button" variant="outline" label="Cancelar" />
-        <Button type="button" variant="primary" label="Salvar Cidade" icon="save" />
+        <PanelButton type="button" variant="outline" label="Cancelar" />
+        <PanelButton type="button" variant="primary" label="Salvar Cidade" icon="save" />
       </div>
-    </Card>
+    </PanelCard>
   </div>
 </template>

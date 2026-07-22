@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import {
-  Breadcrumb,
-  Button,
-  Card,
+  PanelBreadcrumb,
+  PanelButton,
+  PanelCard,
   InputDate,
   InputFile,
   InputSelect,
   InputText,
   PageTitle,
-  Title,
+  PanelTitle,
 } from '@/features/panel/components'
 
 const adsLocations = [
@@ -21,7 +21,7 @@ const adsLocations = [
 </script>
 
 <template>
-  <Breadcrumb
+  <PanelBreadcrumb
     :crumbs="[{ name: 'Anúncios', to: { name: 'Ads' } }, { name: 'Criar Novo Anúncio' }]"
   />
   <PageTitle
@@ -30,12 +30,12 @@ const adsLocations = [
     :button="{ icon: 'arrow_back', label: 'Voltar', route: { name: 'Ads' } }"
   />
 
-  <Card>
-    <Title title="Informações Gerais" />
+  <PanelCard>
+    <PanelTitle title="Informações Gerais" />
     <form class="flex flex-col gap-stack-lg mt-5">
       <InputText type="text" name="title" label="Título do Anúncio" />
 
-      <Title title="Mídia" />
+      <PanelTitle title="Mídia" />
       <InputFile
         label="Imagem do Anúncio"
         name="ad-image"
@@ -43,7 +43,7 @@ const adsLocations = [
         subtitle="JPG, PNG ou GIF. Tamanho máximo: 5MB."
       />
 
-      <Title title="Veiculação" />
+      <PanelTitle title="Veiculação" />
       <div class="flex items-center gap-4 w-full">
         <InputDate label="Data do Inicio" name="start_at" />
         <InputDate label="Data do Término" name="end_at" />
@@ -58,9 +58,9 @@ const adsLocations = [
       />
 
       <div class="flex justify-end gap-4">
-        <Button variant="outline" label="Cancelar" type="button" />
-        <Button variant="primary" label="Salvar Anúncio" type="submit" icon="save" />
+        <PanelButton variant="outline" label="Cancelar" type="button" />
+        <PanelButton variant="primary" label="Salvar Anúncio" type="submit" icon="save" />
       </div>
     </form>
-  </Card>
+  </PanelCard>
 </template>

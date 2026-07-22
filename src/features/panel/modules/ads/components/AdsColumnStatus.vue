@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { Badge } from '@/features/panel/components'
+import { PanelBadge } from '@/features/panel/components'
 
 defineProps<{
   status: string
 }>()
 </script>
 <template>
-  <Badge :label="status" />
+  <PanelBadge :label="status" />
 </template>

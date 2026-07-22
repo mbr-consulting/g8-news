@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Breadcrumb, PageTitle, Table } from '@/features/panel/components'
+import { PanelBreadcrumb, PageTitle, Table } from '@/features/panel/components'
 import { AdsColumnStatus, AdsColumnTitle } from '../components'
 
 const columns = [
@@ -27,7 +27,7 @@ const rows = [
 </script>
 
 <template>
-  <Breadcrumb :crumbs="[{ name: 'Anúncios' }]" />
+  <PanelBreadcrumb :crumbs="[{ name: 'Anúncios' }]" />
   <PageTitle
     title="Listagem de Anúncios"
     subtitle="Gerencie os anúncios do portal."

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { Breadcrumb, PageTitle, Table } from '@/features/panel/components'
-import type { TableHeadColumnProps } from '@/shared/types'
+import { PanelBreadcrumb, PageTitle, Table } from '@/features/panel/components'
+import type { TableHeadColumnProps, User } from '@/shared/types'
 import { UserColumnType } from '../components'
 
 const columns: TableHeadColumnProps[] = [
@@ -9,7 +9,7 @@ const columns: TableHeadColumnProps[] = [
   { text: 'E-mail', id: 'email' },
   { text: 'Tipo', id: 'type' },
 ]
-const users = [
+const users: User[] = [
   {
     id: 1,
     name: 'Ana Silva',
@@ -35,7 +35,7 @@ const users = [
 </script>
 
 <template>
-  <Breadcrumb :crumbs="[{ name: 'Usuários', to: { name: 'Users' } }]" />
+  <PanelBreadcrumb :crumbs="[{ name: 'Usuários', to: { name: 'Users' } }]" />
   <PageTitle
     title="Listagem de Usuários"
     subtitle="Gerencie os usuários do portal."
