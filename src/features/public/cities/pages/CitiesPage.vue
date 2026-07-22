@@ -3,26 +3,28 @@ import { ref, onMounted } from 'vue'
 import 'leaflet/dist/leaflet.css'
 import L from 'leaflet'
 
-const initialMap = ref(null)
+const initialMap = ref<L.Map | null>(null)
 
 onMounted(() => {
-  initialMap.value = L.map('map').setView([-19.64, -40.441], 8)
+  const map = L.map('map').setView([-19.64, -40.441], 8)
+  initialMap.value = map
+
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
-  }).addTo(initialMap.value)
+  }).addTo(map)
 
-  L.marker([-20.3155, -40.3128]).addTo(initialMap.value).bindPopup('Vitória')
-  L.marker([-20.3297, -40.2925]).addTo(initialMap.value).bindPopup('Vila Velha')
-  L.marker([-20.1286, -40.3078]).addTo(initialMap.value).bindPopup('Serra')
-  L.marker([-20.2632, -40.4165]).addTo(initialMap.value).bindPopup('Cariacica')
-  L.marker([-19.3947, -40.0643]).addTo(initialMap.value).bindPopup('Linhares')
-  L.marker([-18.7211, -39.8587]).addTo(initialMap.value).bindPopup('São Mateus')
-  L.marker([-20.6715, -40.4975]).addTo(initialMap.value).bindPopup('Guarapari')
-  L.marker([-19.935, -40.6008]).addTo(initialMap.value).bindPopup('Santa Teresa')
-  L.marker([-20.3637, -40.6593]).addTo(initialMap.value).bindPopup('Domingos Martins')
-  L.marker([-19.82, -40.2739]).addTo(initialMap.value).bindPopup('Aracruz')
-  L.marker([-19.5387, -40.6306]).addTo(initialMap.value).bindPopup('Colatina')
-  L.marker([-19.1897, -40.0973]).addTo(initialMap.value).bindPopup('Sooretama')
+  L.marker([-20.3155, -40.3128]).addTo(map).bindPopup('Vitória')
+  L.marker([-20.3297, -40.2925]).addTo(map).bindPopup('Vila Velha')
+  L.marker([-20.1286, -40.3078]).addTo(map).bindPopup('Serra')
+  L.marker([-20.2632, -40.4165]).addTo(map).bindPopup('Cariacica')
+  L.marker([-19.3947, -40.0643]).addTo(map).bindPopup('Linhares')
+  L.marker([-18.7211, -39.8587]).addTo(map).bindPopup('São Mateus')
+  L.marker([-20.6715, -40.4975]).addTo(map).bindPopup('Guarapari')
+  L.marker([-19.935, -40.6008]).addTo(map).bindPopup('Santa Teresa')
+  L.marker([-20.3637, -40.6593]).addTo(map).bindPopup('Domingos Martins')
+  L.marker([-19.82, -40.2739]).addTo(map).bindPopup('Aracruz')
+  L.marker([-19.5387, -40.6306]).addTo(map).bindPopup('Colatina')
+  L.marker([-19.1897, -40.0973]).addTo(map).bindPopup('Sooretama')
 })
 </script>
 <template>

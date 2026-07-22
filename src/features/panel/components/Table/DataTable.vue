@@ -15,7 +15,7 @@ defineProps<TableProps<T>>()
           <tr
             class="hover:bg-surface-container-lowest transition-colors bg-surface-container-lowest border-b border-outline-variant"
             v-for="(row, rowIndex) in data"
-            :key="row.id || rowIndex"
+            :key="String(row.id ?? rowIndex)"
           >
             <td class="py-4 px-4" v-for="col in headers.columns" :key="col.id">
               <slot :name="`cell(${col.id})`" :row="row" :value="row[col.id]">
