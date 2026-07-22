@@ -9,7 +9,7 @@ defineProps<PanelBreadcrumbProps>()
     <div v-for="(item, key) in crumbs" :key="key" class="flex items-center gap-2">
       <span class="material-symbols-outlined text-[14px]">chevron_right</span>
       <span v-if="key === crumbs.length - 1" class="text-primary font-bold">{{ item.name }}</span>
-      <RouterLink v-else class="hover:text-primary" :to="item.to">{{ item.name }}</RouterLink>
+      <RouterLink v-else-if="item.to" class="hover:text-primary" :to="item.to">{{ item.name }}</RouterLink>
     </div>
   </nav>
 </template>
