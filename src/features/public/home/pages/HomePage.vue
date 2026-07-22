@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Announcement from '@/shared/components/AnnouncementSection.vue'
 import PostCard from '@/shared/components/PostCard.vue'
 import { EditorialSection, GridSection, HeroSection } from '../components'
+import { AdSection } from '@/shared/components'
 </script>
 
 <template>
@@ -116,7 +116,7 @@ import { EditorialSection, GridSection, HeroSection } from '../components'
       </aside>
     </EditorialSection>
 
-    <Announcement />
+    <AdSection />
 
     <!-- <section
       class="w-full bg-surface-container-lowest border-t border-outline-variant py-section-padding"
