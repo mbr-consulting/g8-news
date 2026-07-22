@@ -43,15 +43,43 @@ export interface InputTextareaProps {
 }
 
 /** Input */
+
+/** Users */
+export interface UserColumnTypeProps {
+  type: 'admin' | 'editor' | 'author'
+}
+
+export type UserType = 'admin' | 'editor' | 'author'
+
+export interface UserColumnTypeProps {
+  type: UserType
+}
+
+export interface User {
+  [key: string]: unknown
+  id: number
+  name: string
+  username: string
+  email: string
+  type: UserType
+}
+
+/** Users */
 export interface ButtonTagProps {
   title: string
 }
 
 export interface PanelBreadcrumbProps {
-  crumbs: {
-    name: string
-    to?: { name: string }
-  }[]
+  crumbs: PanelBreadcrumbLinkProps[]
+}
+
+export interface PanelBreadcrumbLinkProps {
+  name: string
+  to?: PanelBreadcrumbRefProps
+}
+
+export interface PanelBreadcrumbRefProps {
+  name: string
 }
 
 export interface PanelButtonProps {
