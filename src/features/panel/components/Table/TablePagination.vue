@@ -8,7 +8,6 @@
     <div class="flex items-center gap-1">
       <button
         class="p-1 rounded text-outline hover:bg-surface-container hover:text-on-surface transition-colors"
-        disabled=""
       >
         <span class="material-symbols-outlined text-[20px]">chevron_left</span>
       </button>
