@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { PanelHeader, PanelMenu } from '@/features/panel/components'
+import { PanelHeader, PanelMenu } from '@/features/panel/components';
 </script>
 
 <template>

@@ -16,6 +16,7 @@ import MenuItem from './MenuItem.vue'
         <MenuItem icon="campaign" label="Anúncios" href="/panel/ads" />
         <MenuItem icon="location_city" label="Cidades" href="/panel/cities" />
         <MenuItem icon="group" label="Usuários" href="/panel/users" />
+        <MenuItem icon="settings" label="Configurações" href="/panel/settings" />
 
         <!-- Posts (Active) -->
         <!-- <li>
@@ -64,26 +65,6 @@ import MenuItem from './MenuItem.vue'
       </ul>
     </div>
     <div class="mt-auto border-t border-outline-variant pt-stack-sm px-margin-x">
-      <ul class="flex flex-col">
-        <li>
-          <a
-            class="flex items-center gap-3 py-3 text-on-surface-variant hover:bg-surface-variant hover:text-on-surface transition-colors duration-200 ease-in-out"
-            href="#"
-          >
-            <span class="material-symbols-outlined text-[20px]">settings</span>
-            <span class="font-label-lg text-label-lg">Settings</span>
-          </a>
-        </li>
-        <li>
-          <a
-            class="flex items-center gap-3 py-3 text-on-surface-variant hover:bg-surface-variant hover:text-on-surface transition-colors duration-200 ease-in-out"
-            href="#"
-          >
-            <span class="material-symbols-outlined text-[20px]">logout</span>
-            <span class="font-label-lg text-label-lg">Logout</span>
-          </a>
-        </li>
-      </ul>
       <div class="flex items-center gap-3 mt-stack-md pb-stack-sm">
         <img
           alt="G8 News Admin Profile"
