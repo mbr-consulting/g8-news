@@ -39,7 +39,6 @@
               id="username"
               name="username"
               placeholder="Digite seu usuário"
-              required=""
               type="text"
             />
           </div>
@@ -68,7 +67,6 @@
               id="password"
               name="password"
               placeholder="Digite sua senha"
-              required=""
               type="password"
             />
             <button
