@@ -44,6 +44,14 @@ export interface InputTextareaProps {
 
 /** Input */
 
+/** Dashboard */
+export interface DashboardCardProps {
+  icon: string
+  title: string
+  value: string | number
+  subtitle?: string
+}
+
 /** Users */
 export interface UserColumnTypeProps {
   type: 'admin' | 'editor' | 'author'
